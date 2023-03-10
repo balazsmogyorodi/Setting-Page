@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="success.js"></script>
+    <script src="valid.js"></script>
 </head>
 
 <body>
@@ -15,20 +15,19 @@
             <h1>Regisztráció!</h1>
         </header>
         <article>
-            <form action="action.php" method="get" name="name" onsubmit="return valiateForm">
+            <form action="#" method="get" name="validTeszt" onsubmit = "return validateForm()">
                 <label for="knev">Kérek egy felhasználó nevet!</label>
-                <input type="text" id="knev" name="knev">
+                <input type="text" id="knev" name="knev" required  pattern="[A-Za-z].{3,}"  title="nimimum három betűs nevet">
                 <label for="vnev">Kérem erősítse meg!</label>
-                <input type="text" id="vnev" name="vnev">
+                <input type="text" id="vnev" name="vnev" required pattern="[A-Za-z].{3,}"  title="nimimum három betűs nevet">
                 <br>
                 <br>
                 <br>
                 <label for="jelszo">Kérek egy jelszót!</label>
-                <input type="password" id="jelszo" name="jelszo">
+                <input type="password" id="jelszo" name="jelszo" required pattern=".{8,}" title="nyolc vagy több karakter">
                 <label for="jelszoMegerositese">Kérem erősítse meg!</label>
-                <input type="password" id="jelszoMegerositese" name="jelszoMegerositese">
-
-
+                <input type="password" id="jelszoMegerositese" name="jelszoMegerositese" required >
+                <input type="submit" value="submit">
 
 
             </form>
